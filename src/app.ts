@@ -4,7 +4,21 @@ import { fastify } from "fastify"
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler, ZodTypeProvider } from "fastify-type-provider-zod"
 import { routes } from "./routes"
 
-const app = fastify().withTypeProvider<ZodTypeProvider>()
+const environment = process.env.NODE_ENV
+
+const logger = {
+    development: {
+        transport: {
+            target: "pino-pretty"
+        }
+    },
+    production: true,
+    test: false
+}
+
+const app = fastify({
+    logger: logger[environment]
+}).withTypeProvider<ZodTypeProvider>()
 
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
