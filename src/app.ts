@@ -23,23 +23,25 @@ const app = fastify({
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
 
-app.register(fastifySwagger, {
-    openapi: {
-        info: {
-            title: "Fastify API",
-            description: "Example Fastify API with Swagger and integration tests with Vitest.",
-            version: "1.0.0"
+if (environment !== "test") {
+    app.register(fastifySwagger, {
+        openapi: {
+            info: {
+                title: "Fastify API",
+                description: "Example Fastify API with Swagger and integration tests with Vitest.",
+                version: "1.0.0"
+            },
+            tags: [
+                { name: "Example", description: "Example routes for testing" }
+            ]
         },
-        tags: [
-            { name: "Example", description: "Example routes for testing" }
-        ]
-    },
-    transform: jsonSchemaTransform
-})
+        transform: jsonSchemaTransform
+     })
 
-app.register(fastifySwaggerUi, {
-    routePrefix: "/docs"
-})
+    app.register(fastifySwaggerUi, {
+        routePrefix: "/docs"
+    })
+}
 
 app.register(routes)
 
