@@ -1,0 +1,123 @@
+2025-09-22 01:37:54.140 UTC [32654] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-22 01:37:54.163 UTC [32654] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-22 01:37:54.165 UTC [32654] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-22 01:37:54.186 UTC [32654] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-22 01:37:54.221 UTC [32738] LOG:  database system was shut down at 2025-09-22 01:36:37 UTC
+2025-09-22 01:37:54.275 UTC [32654] LOG:  database system is ready to accept connections
+2025-09-22 01:40:13.279 UTC [26294] ERROR:  syntax error at or near "CREATE" at character 29
+2025-09-22 01:40:13.279 UTC [26294] STATEMENT:  CREATE DATABASE development
+	CREATE DATABASE test
+	;
+2025-09-22 01:42:54.279 UTC [32735] LOG:  checkpoint starting: time
+2025-09-22 01:44:15.443 UTC [23497] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2025-09-22 01:44:15.443 UTC [23497] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2025-09-22 01:44:20.820 UTC [32735] LOG:  checkpoint complete: wrote 1844 buffers (11.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=85.998 s, sync=0.493 s, total=86.542 s; sync files=597, longest=0.018 s, average=0.001 s; distance=8512 kB, estimate=8512 kB; lsn=0/2165238, redo lsn=0/1D3CD48
+2025-09-22 01:44:20.825 UTC [32735] LOG:  checkpoint starting: immediate force wait
+2025-09-22 01:44:20.899 UTC [32735] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.018 s, sync=0.007 s, total=0.074 s; sync files=3, longest=0.004 s, average=0.003 s; distance=4257 kB, estimate=8086 kB; lsn=0/2165308, redo lsn=0/21652B0
+2025-09-22 01:44:24.275 UTC [32735] LOG:  checkpoint starting: immediate force wait
+2025-09-22 01:44:24.328 UTC [32735] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.005 s, total=0.054 s; sync files=4, longest=0.003 s, average=0.002 s; distance=4257 kB, estimate=7703 kB; lsn=0/258D990, redo lsn=0/258D938
+2025-09-22 04:17:55.321 UTC [24379] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-22 04:17:55.363 UTC [24379] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-22 04:17:55.367 UTC [24379] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-22 04:17:55.548 UTC [24379] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-22 04:17:55.634 UTC [24625] LOG:  database system was interrupted; last known up at 2025-09-22 01:44:24 UTC
+2025-09-22 04:18:02.828 UTC [24625] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-22 04:18:02.900 UTC [24625] LOG:  redo starts at 0/258D938
+2025-09-22 04:18:02.927 UTC [24625] WARNING:  could not open directory "base/16387": No such file or directory
+2025-09-22 04:18:02.927 UTC [24625] CONTEXT:  WAL redo at 0/258DA08 for Database/DROP: dir 1663/16387
+2025-09-22 04:18:02.927 UTC [24625] WARNING:  some useless files may be left behind in old database directory "base/16387"
+2025-09-22 04:18:02.927 UTC [24625] CONTEXT:  WAL redo at 0/258DA08 for Database/DROP: dir 1663/16387
+2025-09-22 04:18:03.108 UTC [24625] LOG:  invalid record length at 0/25BD2E8: expected at least 24, got 0
+2025-09-22 04:18:03.108 UTC [24625] LOG:  redo done at 0/25BD2B0 system usage: CPU: user: 0.03 s, system: 0.00 s, elapsed: 0.20 s
+2025-09-22 04:18:03.179 UTC [24623] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-22 04:18:03.336 UTC [24623] LOG:  checkpoint complete: wrote 59 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.081 s, sync=0.035 s, total=0.163 s; sync files=45, longest=0.006 s, average=0.001 s; distance=190 kB, estimate=190 kB; lsn=0/25BD2E8, redo lsn=0/25BD2E8
+2025-09-22 04:18:03.370 UTC [24379] LOG:  database system is ready to accept connections
+2025-09-22 04:18:38.911 UTC [24623] LOG:  checkpoint starting: immediate force wait
+2025-09-22 04:18:38.988 UTC [24623] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.013 s, total=0.077 s; sync files=9, longest=0.007 s, average=0.002 s; distance=4278 kB, estimate=4278 kB; lsn=0/29EAC40, redo lsn=0/29EABE8
+2025-09-22 04:18:42.344 UTC [24623] LOG:  checkpoint starting: immediate force wait
+2025-09-22 04:18:42.431 UTC [24623] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.021 s, sync=0.013 s, total=0.088 s; sync files=8, longest=0.004 s, average=0.002 s; distance=4278 kB, estimate=4278 kB; lsn=0/2E186A8, redo lsn=0/2E18650
+2025-09-22 04:23:42.479 UTC [24623] LOG:  checkpoint starting: time
+2025-09-22 04:23:42.840 UTC [24623] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.128 s, sync=0.006 s, total=0.375 s; sync files=2, longest=0.004 s, average=0.003 s; distance=0 kB, estimate=3850 kB; lsn=0/2E18840, redo lsn=0/2E187E8
+2025-09-22 04:38:43.009 UTC [24623] LOG:  checkpoint starting: time
+2025-09-22 04:38:43.735 UTC [24623] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.643 s, sync=0.020 s, total=0.731 s; sync files=5, longest=0.015 s, average=0.004 s; distance=0 kB, estimate=3465 kB; lsn=0/2E18BD0, redo lsn=0/2E18B78
+2025-09-22 04:48:42.946 UTC [24623] LOG:  checkpoint starting: time
+2025-09-22 04:48:43.348 UTC [24623] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.327 s, sync=0.015 s, total=0.404 s; sync files=4, longest=0.012 s, average=0.004 s; distance=0 kB, estimate=3119 kB; lsn=0/2E18FC8, redo lsn=0/2E18F70
+2025-09-22 21:29:54.429 UTC [5234] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-22 21:29:54.454 UTC [5234] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-22 21:29:54.456 UTC [5234] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-22 21:29:54.478 UTC [5234] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-22 21:29:54.537 UTC [5350] LOG:  database system was interrupted; last known up at 2025-09-22 04:48:43 UTC
+2025-09-22 21:29:59.977 UTC [5350] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-22 21:30:00.043 UTC [5350] LOG:  redo starts at 0/2E18F70
+2025-09-22 21:30:00.043 UTC [5350] LOG:  invalid record length at 0/2E19078: expected at least 24, got 0
+2025-09-22 21:30:00.043 UTC [5350] LOG:  redo done at 0/2E19040 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-09-22 21:30:00.094 UTC [5348] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-22 21:30:00.141 UTC [5348] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.005 s, total=0.051 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/2E19078, redo lsn=0/2E19078
+2025-09-22 21:30:00.161 UTC [5234] LOG:  database system is ready to accept connections
+2025-09-23 10:53:10.669 UTC [599] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-23 10:53:10.699 UTC [599] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-23 10:53:10.700 UTC [599] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-23 10:53:10.721 UTC [599] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-23 10:53:10.778 UTC [878] LOG:  database system was interrupted; last known up at 2025-09-22 21:30:00 UTC
+2025-09-23 10:53:16.432 UTC [878] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-23 10:53:16.493 UTC [878] LOG:  redo starts at 0/2E190F0
+2025-09-23 10:53:16.493 UTC [878] LOG:  invalid record length at 0/2E19128: expected at least 24, got 0
+2025-09-23 10:53:16.493 UTC [878] LOG:  redo done at 0/2E190F0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-09-23 10:53:16.550 UTC [873] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-23 10:53:16.597 UTC [873] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.004 s, total=0.051 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/2E19128, redo lsn=0/2E19128
+2025-09-23 10:53:16.624 UTC [599] LOG:  database system is ready to accept connections
+2025-09-23 10:54:16.539 UTC [16596] ERROR:  relation "customers" already exists
+2025-09-23 10:54:16.539 UTC [16596] STATEMENT:  -- CreateTable
+	CREATE TABLE "public"."customers" (
+	    "id" TEXT NOT NULL,
+	    "name" TEXT NOT NULL,
+	    "email" TEXT NOT NULL,
+	    "password" TEXT NOT NULL,
+	
+	    CONSTRAINT "customers_pkey" PRIMARY KEY ("id")
+	);
+	
+	-- CreateIndex
+	CREATE UNIQUE INDEX "customers_email_key" ON "public"."customers"("email");
+	
+2025-09-23 10:54:32.893 UTC [20946] ERROR:  relation "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67.customers" does not exist at character 251
+2025-09-23 10:54:32.893 UTC [20946] STATEMENT:  SELECT "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers"."id", "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers"."name", "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers"."email", "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers"."password" FROM "262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers" WHERE ("262f79e3-a037-4d7f-8f7c-6bd33d0c6e67"."customers"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+2025-09-23 10:54:33.645 UTC [21122] ERROR:  trailing junk after numeric literal at or near "262f79e3" at character 44
+2025-09-23 10:54:33.645 UTC [21122] STATEMENT:  
+	                    DROP SCHEMA IF EXISTS 262f79e3-a037-4d7f-8f7c-6bd33d0c6e67
+	                
+2025-09-23 10:58:16.637 UTC [873] LOG:  checkpoint starting: time
+2025-09-23 10:58:23.399 UTC [873] LOG:  checkpoint complete: wrote 66 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.692 s, sync=0.032 s, total=6.773 s; sync files=52, longest=0.004 s, average=0.001 s; distance=227 kB, estimate=227 kB; lsn=0/2E52088, redo lsn=0/2E51FE0
+2025-09-23 11:01:38.002 UTC [20840] ERROR:  syntax error at or near "-" at character 52
+2025-09-23 11:01:38.002 UTC [20840] STATEMENT:  
+	                    DROP SCHEMA IF EXISTS b508aef6-10a7-4a10-b23a-f7bc34898ade
+	                
+2025-09-23 11:01:38.602 UTC [20983] ERROR:  trailing junk after numeric literal at or near "05e69a72" at character 44
+2025-09-23 11:01:38.602 UTC [20983] STATEMENT:  
+	                    DROP SCHEMA IF EXISTS 05e69a72-77af-4be6-8e28-b0f7c5b39440
+	                
+2025-09-23 11:03:16.481 UTC [873] LOG:  checkpoint starting: time
+2025-09-23 11:03:16.823 UTC [11555] ERROR:  syntax error at or near "-" at character 52
+2025-09-23 11:03:16.823 UTC [11555] STATEMENT:  
+	                    DROP SCHEMA IF EXISTS da7c6757-6f1e-4c37-8952-c7812a92a86d
+	                
+2025-09-23 11:03:18.701 UTC [12039] ERROR:  syntax error at or near "-" at character 52
+2025-09-23 11:03:18.701 UTC [12039] STATEMENT:  
+	                    DROP SCHEMA IF EXISTS e61ea0a4-b4cc-4b2b-b97e-1dcd1ee3f51a
+	                
+2025-09-23 11:03:24.617 UTC [873] LOG:  checkpoint complete: wrote 77 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.977 s, sync=0.074 s, total=8.136 s; sync files=70, longest=0.011 s, average=0.002 s; distance=314 kB, estimate=314 kB; lsn=0/2EA0C90, redo lsn=0/2EA09E0
+2025-09-23 11:13:16.834 UTC [873] LOG:  checkpoint starting: time
+2025-09-23 11:13:28.165 UTC [873] LOG:  checkpoint complete: wrote 40 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.556 s, sync=0.456 s, total=11.340 s; sync files=40, longest=0.287 s, average=0.012 s; distance=178 kB, estimate=300 kB; lsn=0/2ED5A78, redo lsn=0/2ECD2D0
+2025-09-23 11:18:16.267 UTC [873] LOG:  checkpoint starting: time
+2025-09-23 11:18:22.923 UTC [873] LOG:  checkpoint complete: wrote 60 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.300 s, sync=0.103 s, total=6.662 s; sync files=46, longest=0.023 s, average=0.003 s; distance=326 kB, estimate=326 kB; lsn=0/2F1EE50, redo lsn=0/2F1EDC0
+2025-09-23 11:23:16.932 UTC [873] LOG:  checkpoint starting: time
+2025-09-23 11:23:21.957 UTC [873] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.762 s, sync=0.078 s, total=5.027 s; sync files=38, longest=0.026 s, average=0.003 s; distance=229 kB, estimate=316 kB; lsn=0/2F582E0, redo lsn=0/2F58288
+2025-09-23 11:25:08.752 UTC [11313] FATAL:  lock file "postmaster.pid" already exists
+2025-09-23 11:25:08.752 UTC [11313] HINT:  Is another postmaster (PID 599) running in data directory "/var/lib/postgresql/fastify-api"?
+2025-09-23 11:25:20.145 UTC [599] LOG:  received fast shutdown request
+2025-09-23 11:25:20.187 UTC [599] LOG:  aborting any active transactions
+2025-09-23 11:25:20.204 UTC [599] LOG:  background worker "logical replication launcher" (PID 2685) exited with exit code 1
+2025-09-23 11:25:20.205 UTC [873] LOG:  shutting down
+2025-09-23 11:25:20.212 UTC [873] LOG:  checkpoint starting: shutdown immediate
+2025-09-23 11:25:20.270 UTC [873] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.005 s, total=0.064 s; sync files=1, longest=0.005 s, average=0.005 s; distance=0 kB, estimate=285 kB; lsn=0/2F58390, redo lsn=0/2F58390
+2025-09-23 11:25:20.314 UTC [599] LOG:  database system is shut down

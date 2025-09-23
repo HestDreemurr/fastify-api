@@ -32,7 +32,8 @@ if (environment !== "test") {
                 version: "1.0.0"
             },
             tags: [
-                { name: "Example", description: "Example routes for testing" }
+                { name: "Example", description: "Example routes for testing" },
+                { name: "Customers", description: "Customer auth endpoints" }
             ]
         },
         transform: jsonSchemaTransform
