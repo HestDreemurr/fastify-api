@@ -3,6 +3,8 @@ import { fastifySwaggerUi } from "@fastify/swagger-ui"
 import { fastify } from "fastify"
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler, ZodTypeProvider } from "fastify-type-provider-zod"
 import { routes } from "./routes"
+import { BaseError } from "./routes/errors/base-error"
+import { FastifyBaseError } from "./types/fastify"
 
 const environment = process.env.NODE_ENV
 
@@ -43,6 +45,24 @@ if (environment !== "test") {
         routePrefix: "/docs"
     })
 }
+
+app.setErrorHandler((
+    error: FastifyBaseError,
+    request,
+    reply
+) => {
+    if (error instanceof BaseError || error.validation) {
+        return reply.status(error.status ?? 400).send({
+            message: error.message
+        })
+    }
+
+    request.log.debug(error)
+
+    return reply.status(500).send({
+        message: "Unexpected server error"
+    })
+})
 
 app.register(routes)
 

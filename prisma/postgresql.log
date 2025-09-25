@@ -121,3 +121,25 @@
 2025-09-23 11:25:20.212 UTC [873] LOG:  checkpoint starting: shutdown immediate
 2025-09-23 11:25:20.270 UTC [873] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.005 s, total=0.064 s; sync files=1, longest=0.005 s, average=0.005 s; distance=0 kB, estimate=285 kB; lsn=0/2F58390, redo lsn=0/2F58390
 2025-09-23 11:25:20.314 UTC [599] LOG:  database system is shut down
+2025-09-24 12:07:01.663 UTC [26606] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-24 12:07:01.691 UTC [26606] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-24 12:07:01.692 UTC [26606] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-24 12:07:01.704 UTC [26606] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-24 12:07:01.756 UTC [26617] LOG:  database system was shut down at 2025-09-23 11:25:20 UTC
+2025-09-24 12:07:01.832 UTC [26606] LOG:  database system is ready to accept connections
+2025-09-24 12:12:01.864 UTC [26615] LOG:  checkpoint starting: time
+2025-09-24 12:12:02.278 UTC [26615] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.332 s, sync=0.015 s, total=0.420 s; sync files=5, longest=0.007 s, average=0.003 s; distance=1 kB, estimate=1 kB; lsn=0/2F58850, redo lsn=0/2F587F8
+2025-09-25 04:02:15.005 UTC [13196] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-25 04:02:15.038 UTC [13196] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-25 04:02:15.040 UTC [13196] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-25 04:02:15.060 UTC [13196] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-25 04:02:15.113 UTC [13199] LOG:  database system was interrupted; last known up at 2025-09-24 12:12:02 UTC
+2025-09-25 04:02:20.864 UTC [13199] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-25 04:02:20.928 UTC [13199] LOG:  redo starts at 0/2F587F8
+2025-09-25 04:02:20.928 UTC [13199] LOG:  invalid record length at 0/2F58900: expected at least 24, got 0
+2025-09-25 04:02:20.928 UTC [13199] LOG:  redo done at 0/2F588C8 system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.00 s
+2025-09-25 04:02:20.974 UTC [13197] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-25 04:02:21.022 UTC [13197] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.005 s, total=0.051 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/2F58900, redo lsn=0/2F58900
+2025-09-25 04:02:21.044 UTC [13196] LOG:  database system is ready to accept connections
+2025-09-25 04:07:20.120 UTC [13197] LOG:  checkpoint starting: time
+2025-09-25 04:07:23.899 UTC [13197] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.334 s, sync=0.374 s, total=3.781 s; sync files=36, longest=0.192 s, average=0.011 s; distance=199 kB, estimate=199 kB; lsn=0/2F8A6D0, redo lsn=0/2F8A640

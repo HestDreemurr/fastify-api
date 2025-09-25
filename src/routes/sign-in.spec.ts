@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import request from "supertest"
 import { app } from "@/server"
+import { CustomerAlreadyExistsError } from "./errors/customer-already-exists"
 
 describe("POST /sign-in", () => {
     it("should successfully create an customer", async () => {
@@ -26,6 +27,6 @@ describe("POST /sign-in", () => {
             })
 
         expect(response.status).toBe(409)
-        expect(response.body.message).toBe("This customer already exists.")
+        expect(response.body.message).toBe(CustomerAlreadyExistsError.message)
     })
 })

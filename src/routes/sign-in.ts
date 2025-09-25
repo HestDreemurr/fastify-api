@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma"
 import { FastifyApp } from "@/types/fastify"
 import z from "zod"
+import { CustomerAlreadyExistsError } from "./errors/customer-already-exists"
 
 export async function signIn(app: FastifyApp) {
     app.post(
@@ -19,7 +20,7 @@ export async function signIn(app: FastifyApp) {
                         token: z.string()
                     }).describe("Created customer"),
                     409: z.object({
-                        message: z.string()
+                        message: z.literal(CustomerAlreadyExistsError.message)
                     }).describe("Customer already exists")
                 }
             }
@@ -34,9 +35,7 @@ export async function signIn(app: FastifyApp) {
             })
 
             if (customerAlreadyExists) {
-                return reply.status(409).send({
-                    message: "This customer already exists."
-                })
+                throw new CustomerAlreadyExistsError()
             }
             
             // Criptografar a senha
