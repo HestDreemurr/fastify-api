@@ -2,6 +2,7 @@ import { fastifySwagger } from "@fastify/swagger"
 import { fastifySwaggerUi } from "@fastify/swagger-ui"
 import { fastify } from "fastify"
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler, ZodTypeProvider } from "fastify-type-provider-zod"
+import { fastifyJwt } from "@fastify/jwt"
 import { routes } from "./routes"
 import { BaseError } from "./routes/errors/base-error"
 import { FastifyBaseError } from "./types/fastify"
@@ -36,7 +37,16 @@ if (environment !== "test") {
             tags: [
                 { name: "Example", description: "Example routes for testing" },
                 { name: "Customers", description: "Customer auth endpoints" }
-            ]
+            ],
+            components: {
+                securitySchemes: {
+                    bearerAuth: {
+                        type: "http",
+                        scheme: "bearer",
+                        bearerFormat: "JWT"
+                    }
+                }
+            }
         },
         transform: jsonSchemaTransform
      })
@@ -45,6 +55,10 @@ if (environment !== "test") {
         routePrefix: "/docs"
     })
 }
+
+app.register(fastifyJwt, {
+    secret: process.env.JWT_SECRET
+})
 
 app.setErrorHandler((
     error: FastifyBaseError,

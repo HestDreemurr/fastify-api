@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma"
 import { FastifyApp } from "@/types/fastify"
 import z from "zod"
 import { CustomerAlreadyExistsError } from "./errors/customer-already-exists"
+import { hash } from "bcryptjs"
 
 export async function signIn(app: FastifyApp) {
     app.post(
@@ -38,19 +39,21 @@ export async function signIn(app: FastifyApp) {
                 throw new CustomerAlreadyExistsError()
             }
             
-            // Criptografar a senha
-            
-            await prisma.customer.create({
+           const customer = await prisma.customer.create({
                 data: {
                     name,
                     email,
-                    password
+                    password: await hash(password, 6)
                 }
             })
 
-            // Gerar o token
+            const token = await reply.jwtSign(
+                {
+                    id: customer.id
+                }
+            )
 
-            return reply.status(201).send({ token: "" })
+            return reply.status(201).send({ token })
         }
     )
 }
