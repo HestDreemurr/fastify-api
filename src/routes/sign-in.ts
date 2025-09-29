@@ -47,11 +47,7 @@ export async function signIn(app: FastifyApp) {
                 }
             })
 
-            const token = await reply.jwtSign(
-                {
-                    id: customer.id
-                }
-            )
+            const token = await reply.jwtSign({ id: customer.id })
 
             return reply.status(201).send({ token })
         }
