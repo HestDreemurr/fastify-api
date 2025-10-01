@@ -227,3 +227,81 @@
 2025-09-29 21:33:37.353 UTC [8967] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=4.367 s, sync=0.718 s, total=5.267 s; sync files=38, longest=0.213 s, average=0.019 s; distance=216 kB, estimate=216 kB; lsn=0/3027140, redo lsn=0/30270E8
 2025-09-29 21:38:32.472 UTC [8967] LOG:  checkpoint starting: time
 2025-09-29 21:38:36.554 UTC [8967] LOG:  checkpoint complete: wrote 37 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.878 s, sync=0.026 s, total=4.092 s; sync files=31, longest=0.007 s, average=0.001 s; distance=153 kB, estimate=210 kB; lsn=0/304D7D0, redo lsn=0/304D778
+2025-09-29 22:32:18.621 UTC [31459] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-29 22:32:18.647 UTC [31459] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-29 22:32:18.649 UTC [31459] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-29 22:32:18.669 UTC [31459] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-29 22:32:18.728 UTC [31463] LOG:  database system was interrupted; last known up at 2025-09-29 21:38:36 UTC
+2025-09-29 22:32:24.447 UTC [31463] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-29 22:32:24.508 UTC [31463] LOG:  redo starts at 0/304D778
+2025-09-29 22:32:24.509 UTC [31463] LOG:  invalid record length at 0/304D880: expected at least 24, got 0
+2025-09-29 22:32:24.509 UTC [31463] LOG:  redo done at 0/304D848 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-09-29 22:32:24.564 UTC [31461] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-29 22:32:24.612 UTC [31461] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.005 s, total=0.051 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/304D880, redo lsn=0/304D880
+2025-09-29 22:32:24.635 UTC [31459] LOG:  database system is ready to accept connections
+2025-09-30 14:25:52.818 UTC [26454] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-30 14:25:52.846 UTC [26454] LOG:  listening on IPv6 address "::1", port 5432
+2025-09-30 14:25:52.847 UTC [26454] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-09-30 14:25:52.867 UTC [26454] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-30 14:25:52.918 UTC [26457] LOG:  database system was interrupted; last known up at 2025-09-29 22:32:24 UTC
+2025-09-30 14:25:57.643 UTC [26457] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-09-30 14:25:57.678 UTC [26457] LOG:  redo starts at 0/304D8F8
+2025-09-30 14:25:57.678 UTC [26457] LOG:  invalid record length at 0/304D930: expected at least 24, got 0
+2025-09-30 14:25:57.678 UTC [26457] LOG:  redo done at 0/304D8F8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-09-30 14:25:57.718 UTC [26455] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-09-30 14:25:57.761 UTC [26455] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.005 s, total=0.046 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/304D930, redo lsn=0/304D930
+2025-09-30 14:25:57.779 UTC [26454] LOG:  database system is ready to accept connections
+2025-10-01 02:04:10.152 UTC [26683] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-10-01 02:04:10.181 UTC [26683] LOG:  listening on IPv6 address "::1", port 5432
+2025-10-01 02:04:10.184 UTC [26683] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-10-01 02:04:10.205 UTC [26683] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-10-01 02:04:10.259 UTC [26691] LOG:  database system was interrupted; last known up at 2025-09-30 14:25:57 UTC
+2025-10-01 02:04:15.607 UTC [26691] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-10-01 02:04:15.650 UTC [26691] LOG:  redo starts at 0/304D9A8
+2025-10-01 02:04:15.650 UTC [26691] LOG:  invalid record length at 0/304D9E0: expected at least 24, got 0
+2025-10-01 02:04:15.650 UTC [26691] LOG:  redo done at 0/304D9A8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-10-01 02:04:15.705 UTC [26689] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-10-01 02:04:15.754 UTC [26689] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.006 s, total=0.055 s; sync files=2, longest=0.004 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/304D9E0, redo lsn=0/304D9E0
+2025-10-01 02:04:15.768 UTC [26683] LOG:  database system is ready to accept connections
+2025-10-01 02:26:05.524 UTC [9061] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-10-01 02:26:05.553 UTC [9061] LOG:  listening on IPv6 address "::1", port 5432
+2025-10-01 02:26:05.555 UTC [9061] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-10-01 02:26:05.574 UTC [9061] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-10-01 02:26:05.631 UTC [9064] LOG:  database system was interrupted; last known up at 2025-10-01 02:04:15 UTC
+2025-10-01 02:26:11.723 UTC [9064] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-10-01 02:26:11.764 UTC [9064] LOG:  redo starts at 0/304DA58
+2025-10-01 02:26:11.764 UTC [9064] LOG:  invalid record length at 0/304DA90: expected at least 24, got 0
+2025-10-01 02:26:11.764 UTC [9064] LOG:  redo done at 0/304DA58 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-10-01 02:26:11.825 UTC [9062] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-10-01 02:26:11.878 UTC [9062] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.020 s, sync=0.004 s, total=0.058 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/304DA90, redo lsn=0/304DA90
+2025-10-01 02:26:11.893 UTC [9061] LOG:  database system is ready to accept connections
+2025-10-01 02:31:11.978 UTC [9062] LOG:  checkpoint starting: time
+2025-10-01 02:31:15.975 UTC [9062] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.866 s, sync=0.053 s, total=4.000 s; sync files=42, longest=0.010 s, average=0.002 s; distance=212 kB, estimate=212 kB; lsn=0/3082E00, redo lsn=0/3082DA8
+2025-10-01 02:36:12.077 UTC [9062] LOG:  checkpoint starting: time
+2025-10-01 02:36:16.767 UTC [9062] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.165 s, sync=0.420 s, total=4.692 s; sync files=46, longest=0.318 s, average=0.010 s; distance=248 kB, estimate=248 kB; lsn=0/30C0FF0, redo lsn=0/30C0F98
+2025-10-01 03:32:47.262 UTC [29917] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-10-01 03:32:47.287 UTC [29917] LOG:  listening on IPv6 address "::1", port 5432
+2025-10-01 03:32:47.288 UTC [29917] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-10-01 03:32:47.305 UTC [29917] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-10-01 03:32:47.394 UTC [29920] LOG:  database system was interrupted; last known up at 2025-10-01 02:36:16 UTC
+2025-10-01 03:32:53.801 UTC [29920] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-10-01 03:32:53.856 UTC [29920] LOG:  redo starts at 0/30C0F98
+2025-10-01 03:32:53.856 UTC [29920] LOG:  invalid record length at 0/30C10A0: expected at least 24, got 0
+2025-10-01 03:32:53.856 UTC [29920] LOG:  redo done at 0/30C1068 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-10-01 03:32:53.910 UTC [29918] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-10-01 03:32:53.961 UTC [29918] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.004 s, total=0.056 s; sync files=2, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/30C10A0, redo lsn=0/30C10A0
+2025-10-01 03:32:53.981 UTC [29917] LOG:  database system is ready to accept connections
+2025-10-01 03:37:54.079 UTC [29918] LOG:  checkpoint starting: time
+2025-10-01 03:37:57.804 UTC [29918] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.194 s, sync=0.148 s, total=3.745 s; sync files=4, longest=0.145 s, average=0.037 s; distance=2 kB, estimate=2 kB; lsn=0/30C1960, redo lsn=0/30C18D0
+2025-10-01 03:50:06.399 UTC [8805] LOG:  starting PostgreSQL 17.6 (Debian 17.6-0+deb13u1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-10-01 03:50:06.423 UTC [8805] LOG:  listening on IPv6 address "::1", port 5432
+2025-10-01 03:50:06.425 UTC [8805] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-10-01 03:50:06.445 UTC [8805] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-10-01 03:50:06.494 UTC [8808] LOG:  database system was interrupted; last known up at 2025-10-01 03:37:57 UTC
+2025-10-01 03:50:12.401 UTC [8808] LOG:  database system was not properly shut down; automatic recovery in progress
+2025-10-01 03:50:12.453 UTC [8808] LOG:  redo starts at 0/30C18D0
+2025-10-01 03:50:12.453 UTC [8808] LOG:  invalid record length at 0/30C1A10: expected at least 24, got 0
+2025-10-01 03:50:12.453 UTC [8808] LOG:  redo done at 0/30C19D8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2025-10-01 03:50:12.502 UTC [8806] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-10-01 03:50:12.547 UTC [8806] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.016 s, sync=0.006 s, total=0.048 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/30C1A10, redo lsn=0/30C1A10
+2025-10-01 03:50:12.565 UTC [8805] LOG:  database system is ready to accept connections
